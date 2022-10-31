@@ -1,6 +1,6 @@
 export function Basis(props) {
   return (
-    <div id="basis" className="row g-2 p-3">
+    <form id="basis" className="row g-2 p-3">
       <div className="col-md">
         <div className="form-floating">
           <input
@@ -17,7 +17,7 @@ export function Basis(props) {
           <input
             type="text"
             className="form-control"
-            id="namsurname"
+            id="surname"
             placeholder="Password"
           />
           <label for="surname">Surname: </label>
@@ -42,6 +42,7 @@ export function Basis(props) {
         />
         <label for="phonenumber">Phone number: </label>
       </div>
-    </div>
+      <button type="submit" className="btn btn-success">Submit</button>
+    </form>
   );
 }
