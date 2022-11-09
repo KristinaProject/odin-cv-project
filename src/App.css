@@ -1,3 +1,20 @@
-#basis {
-  width: 50%;
+#basis, #output {
+  flex: 1;
 }
+
+#app {
+  max-width: 1500px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-group {
+  height: 100%;
+}
+
+.list-group-item {
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+
