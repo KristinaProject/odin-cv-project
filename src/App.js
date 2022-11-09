@@ -16,10 +16,10 @@ function App() {
   const [form, setForm] = useState(details);
 
   return (
-    <>
+    <div className="d-flex">
       <Basis cvForm={form} />
       <OutPut setCvForm={setForm} />
-    </>
+    </div>
   );
 }
 

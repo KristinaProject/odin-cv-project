@@ -29,7 +29,6 @@ export function Basis(props) {
           type="email"
           className="form-control"
           id="email"
-          placeholder="name@example.com"
         />
         <label for="email">Email address: </label>
       </div>
@@ -38,9 +37,16 @@ export function Basis(props) {
           type="numbers"
           className="form-control"
           id="phonenumber"
-          placeholder="+37060000000"
         />
         <label for="phonenumber">Phone number: </label>
+      </div>
+      <div className="form-floating">
+        <input
+          type="date"
+          className="form-control"
+          id="date"
+        />
+        <label for="date">Birthdate: </label>
       </div>
       <button type="submit" className="btn btn-success">Submit</button>
     </form>

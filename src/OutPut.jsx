@@ -1,6 +1,6 @@
 export function OutPut(props) {
   return (
-    <div>
+    <div className="p-4">
       Output: 
 
       
