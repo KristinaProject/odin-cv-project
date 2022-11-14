@@ -24,21 +24,15 @@ function App() {
   const [form, setForm] = useState(details);
 
   function onChange(e) {
-    setForm({...form, [e.target.name]: e.target.value}) ;
-  }
-
-  function onSubmit(e) {
-    e.preventDefault();
-    console.log(form)
-    return detailsNull;
+    setForm({ ...form, [e.target.name]: e.target.value });
   }
 
   return (
     <>
       <Header />
       <div id="app" className="d-flex">
-        <Basis onChange={() => onChange} onSubmit={onSubmit}/>
-        <OutPut setCvForm={form} />
+        <Basis onChange={() => onChange} />
+        <OutPut data={form} />
       </div>
     </>
   );
