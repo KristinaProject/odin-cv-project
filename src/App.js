@@ -1,18 +1,10 @@
 import "./App.css";
-import { Basis } from "./Basis";
+import { Basis } from "./components/Basis";
 import { useState } from "react";
-import { OutPut } from "./OutPut";
-import { Header } from "./Header";
+import { OutPut } from "./components/OutPut";
+import { Header } from "./components/Header";
 
 const details = {
-  name: "",
-  surname: "",
-  email: "",
-  phonenumber: "",
-  birthdate: "",
-};
-
-const detailsNull = {
   name: "",
   surname: "",
   email: "",
