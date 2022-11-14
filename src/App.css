@@ -1,8 +1,10 @@
-#basis, #output {
+#basis,
+#output,
+#educa {
   flex: 1;
 }
 
-#app {
+.boo {
   max-width: 1500px;
   width: 80%;
   margin: 0 auto;
@@ -17,4 +19,3 @@
   display: flex;
   align-items: center;
 }
-

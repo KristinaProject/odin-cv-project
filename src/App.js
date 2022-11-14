@@ -3,6 +3,7 @@ import { Basis } from "./components/Basis";
 import { useState } from "react";
 import { OutPut } from "./components/OutPut";
 import { Header } from "./components/Header";
+import { Education } from "./components/Education";
 
 const details = {
   name: "",
@@ -22,9 +23,13 @@ function App() {
   return (
     <>
       <Header />
-      <div id="app" className="d-flex">
+      <div className="d-flex boo">
         <Basis onChange={() => onChange} />
         <OutPut data={form} />
+      </div>
+      <h3 className="text-center">Write your education</h3>
+      <div className="d-flex boo">
+        <Education />
       </div>
     </>
   );
