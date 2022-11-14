@@ -9,7 +9,7 @@ const eduInfo = {
 };
 
 export function Education(props) {
-  const [education, setEducation] = useState(eduInfo);
+  const [form, setForm] = useState(eduInfo);
 
   const schoolRef = useRef(null);
   const degreeRef = useRef(null);
@@ -18,21 +18,23 @@ export function Education(props) {
   const abilityRef = useRef(null);
 
   function onSubmitEdu(e) {
+    e.preventDefault();
+
     const edu = {
-      school: schoolRef,
-      degree: degreeRef,
-      start: startRef,
-      end: endRef,
-      ability: abilityRef,
+      school: schoolRef.current.value,
+      degree: degreeRef.current.value,
+      start: startRef.current.value,
+      end: endRef.current.value,
+      ability: abilityRef.current.value,
     };
 
-    setEducation(edu);
+    setForm(edu);
 
-    props.onSubmit(education);
+    props.setEducation([...props.education, {...form}]);
   }
 
   return (
-    <form id="educa" className="row p-3 g-2">
+    <form id="educa" className="row p-3 g-2" onSubmit={onSubmitEdu}>
       <div className="form-floating">
         <input
           type="text"
@@ -83,11 +85,7 @@ export function Education(props) {
         />
         <label htmlFor="abilities">Abilities: </label>
       </div>
-      <button
-        type="submit"
-        className="btn btn-success"
-        onSubmit={(e) => onSubmitEdu(e)}
-      >
+      <button type="submit" className="btn btn-success">
         Submit
       </button>
     </form>

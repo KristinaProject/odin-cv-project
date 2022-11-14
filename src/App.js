@@ -14,27 +14,23 @@ const details = {
   birthdate: "",
 };
 
-const eduInfo = {
-  school: "",
-  degree: "",
-  start: "",
-  end: "",
-  ability: "",
-};
+// const eduInfo = {
+//   school: "",
+//   degree: "",
+//   start: "",
+//   end: "",
+//   ability: "",
+// };
 
 function App() {
   const [form, setForm] = useState(details);
-  const [education, setEducation] = useState(eduInfo);
+  const [education, setEducation] = useState([]);
 
   function onChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function onSubmitE(e, a){
-    e.preventDefault();
-    setEducation(a);
-    console.log(education)
-  }
+  console.log(education);
 
   return (
     <>
@@ -45,7 +41,7 @@ function App() {
       </div>
       <h3 className="text-center">Write your education</h3>
       <div className="d-flex boo">
-        <Education onSubmit={onSubmitE}/>
+        <Education setEducation={setEducation} education={education}/>
         <EducOutput data={education}/>
       </div>
     </>
