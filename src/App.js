@@ -22,9 +22,9 @@ function App() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  // function deleteItem(school) {
-  //   education.filter((item) => item.school !== school)
-  // }
+  function deleteItem(school) {
+    setEducation(education.filter((item) => item.school !== school))
+  }
 
   return (
     <>
@@ -36,7 +36,7 @@ function App() {
       <h3 className="text-center">Write your education</h3>
       <div className="d-flex boo">
         <Education setEducation={setEducation} education={education}/>
-        <EducOutput data={education} />
+        <EducOutput data={education} onDelete={deleteItem}/>
       </div>
     </>
   );
