@@ -17,9 +17,7 @@ export function Education(props) {
   const endRef = useRef(null);
   const abilityRef = useRef(null);
 
-  function onSubmitEdu(e) {
-    e.preventDefault();
-
+  function onchange() {
     const edu = {
       school: schoolRef.current.value,
       degree: degreeRef.current.value,
@@ -29,18 +27,22 @@ export function Education(props) {
     };
 
     setForm(edu);
+  }
 
-    props.setEducation([...props.education, {...form}]);
+  function onSubmitEdu(e) {
+    e.preventDefault();
+    props.setEducation([...props.education, { ...form }]);
   }
 
   return (
-    <form id="educa" className="row p-3 g-2" onSubmit={onSubmitEdu}>
+    <form id="educa" className="row p-3 g-2 " onSubmit={onSubmitEdu}>
       <div className="form-floating">
         <input
           type="text"
           className="form-control"
           name="school"
           ref={schoolRef}
+          onChange={onchange}
         />
         <label htmlFor="school">School or university name: </label>
       </div>
@@ -50,6 +52,7 @@ export function Education(props) {
           className="form-control"
           name="degree"
           ref={degreeRef}
+          onChange={onchange}
         />
         <label htmlFor="degree">Degree: </label>
       </div>
@@ -60,6 +63,7 @@ export function Education(props) {
             className="form-control"
             name="startDate"
             ref={startRef}
+            onChange={onchange}
           />
           <label htmlFor="startDate">Start date: </label>
         </div>
@@ -71,6 +75,7 @@ export function Education(props) {
             className="form-control"
             name="endDate"
             ref={endRef}
+            onChange={onchange}
           />
           <label htmlFor="endDate">End date: </label>
         </div>
@@ -82,6 +87,7 @@ export function Education(props) {
           className="form-control"
           name="abiilities"
           ref={abilityRef}
+          onChange={onchange}
         />
         <label htmlFor="abilities">Abilities: </label>
       </div>

@@ -14,14 +14,6 @@ const details = {
   birthdate: "",
 };
 
-// const eduInfo = {
-//   school: "",
-//   degree: "",
-//   start: "",
-//   end: "",
-//   ability: "",
-// };
-
 function App() {
   const [form, setForm] = useState(details);
   const [education, setEducation] = useState([]);
@@ -30,7 +22,9 @@ function App() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  console.log(education);
+  // function deleteItem(school) {
+  //   education.filter((item) => item.school !== school)
+  // }
 
   return (
     <>
@@ -42,7 +36,7 @@ function App() {
       <h3 className="text-center">Write your education</h3>
       <div className="d-flex boo">
         <Education setEducation={setEducation} education={education}/>
-        <EducOutput data={education}/>
+        <EducOutput data={education} />
       </div>
     </>
   );
