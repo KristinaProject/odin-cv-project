@@ -5,6 +5,8 @@ import { OutPut } from "./components/OutPut";
 import { Header } from "./components/Header";
 import { Education } from "./components/Education";
 import { EducOutput } from "./components/EducOutput";
+import { Experience } from "./components/Experience";
+import { ExpOutput } from "./components/ExpOutput";
 
 const details = {
   name: "",
@@ -17,13 +19,18 @@ const details = {
 function App() {
   const [form, setForm] = useState(details);
   const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
 
   function onChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function deleteItem(school) {
-    setEducation(education.filter((item) => item.school !== school))
+  function deleteEdu(school) {
+    setEducation(education.filter((item) => item.school !== school));
+  }
+
+  function deleteExp(name) {
+    setExperience(experience.filter((item) => item.cName !== name));
   }
 
   return (
@@ -35,8 +42,13 @@ function App() {
       </div>
       <h3 className="text-center">Write your education</h3>
       <div className="d-flex boo">
-        <Education setEducation={setEducation} education={education}/>
-        <EducOutput data={education} onDelete={deleteItem}/>
+        <Education setEducation={setEducation} education={education} />
+        <EducOutput data={education} onDelete={deleteEdu} />
+      </div>
+      <h3 className="text-center">Write your experience</h3>
+      <div className="d-flex boo">
+        <Experience setExperience={setExperience} experience={experience} />
+        <ExpOutput data={experience} onDelete={deleteExp} />
       </div>
     </>
   );
