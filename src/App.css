@@ -1,25 +1,21 @@
 #basis,
-#output,
 #educa,
-#eduOutput,
-#expie,
-#expOut {
+#expie {
   flex: 1;
+}
+
+#output,
+#eduOutput,
+#expOut {
+  flex: 2;
 }
 
 .boo {
   max-width: 1500px;
   width: 80%;
   margin: 0 auto;
+}
+
+.notStart {
   align-items: flex-start;
-}
-
-.list-group {
-  height: 100%;
-}
-
-.list-group-item {
-  height: 25%;
-  display: flex;
-  align-items: center;
 }

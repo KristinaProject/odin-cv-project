@@ -2,7 +2,7 @@ export function Basis(props) {
   return (
     <form
       id="basis"
-      className="row g-2 p-3"
+      className="row g-2 me-4"
     >
       <div className="col-md">
         <div className="form-floating">

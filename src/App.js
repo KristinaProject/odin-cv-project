@@ -40,13 +40,13 @@ function App() {
         <Basis onChange={() => onChange} />
         <OutPut data={form} />
       </div>
-      <h3 className="text-center">Write your education</h3>
-      <div className="d-flex boo">
+      <h3 className="text-center m-4">Write your education</h3>
+      <div className="d-flex boo notStart">
         <Education setEducation={setEducation} education={education} />
         <EducOutput data={education} onDelete={deleteEdu} />
       </div>
-      <h3 className="text-center">Write your experience</h3>
-      <div className="d-flex boo">
+      <h3 className="text-center m-4">Write your experience</h3>
+      <div className="d-flex boo notStart">
         <Experience setExperience={setExperience} experience={experience} />
         <ExpOutput data={experience} onDelete={deleteExp} />
       </div>

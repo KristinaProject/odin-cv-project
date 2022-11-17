@@ -36,7 +36,7 @@ export function Experience(props) {
   }
 
   return (
-    <form id="expie" className="row p-3 g-2" onSubmit={onSubmit}>
+    <form id="expie" className="row me-4 g-2" onSubmit={onSubmit}>
       <div className="form-floating">
         <input
           type="text"

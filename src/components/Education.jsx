@@ -35,7 +35,7 @@ export function Education(props) {
   }
 
   return (
-    <form id="educa" className="row p-3 g-2 " onSubmit={onSubmitEdu}>
+    <form id="educa" className="row me-4 g-2 " onSubmit={onSubmitEdu}>
       <div className="form-floating">
         <input
           type="text"

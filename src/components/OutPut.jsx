@@ -1,13 +1,11 @@
 export function OutPut(props) {
   return (
-    <div id="output" className="p-3">
-      <ul className="list-group">
-        <li className="list-group-item">Name: {props.data.name}</li>
-        <li className="list-group-item">Surname: {props.data.surname}</li>
-        <li className="list-group-item">Email: {props.data.email}</li>
-        <li className="list-group-item">Phone number: {props.data.phonenumber}</li>
-        <li className="list-group-item">Birthdate: {props.data.birthdate}</li>
-      </ul>
+    <div id="output" className="p-4 rounded-end shadow">
+        <h3 >Name: {props.data.name}</h3>
+        <h3 >Surname: {props.data.surname}</h3>
+        <div >Email: {props.data.email}</div>
+        <div >Phone number: {props.data.phonenumber}</div>
+        <div >Birthdate: {props.data.birthdate}</div>
     </div>
   );
 }
