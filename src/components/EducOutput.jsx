@@ -24,6 +24,12 @@ export function EducOutput(props) {
                 >
                   Delete
                 </button>
+                <button
+                  className="btn btn-secondary ms-2"
+                  onClick={() => props.onClick(item.school)}
+                >
+                  Edit
+                </button>
               </div>
             </div>
           ))}

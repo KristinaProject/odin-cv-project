@@ -43,7 +43,7 @@ function App() {
       <h3 className="text-center m-4">Write your education</h3>
       <div className="d-flex boo notStart">
         <Education setEducation={setEducation} education={education} />
-        <EducOutput data={education} onDelete={deleteEdu} />
+        <EducOutput data={education} onDelete={deleteEdu}/>
       </div>
       <h3 className="text-center m-4">Write your experience</h3>
       <div className="d-flex boo notStart">
