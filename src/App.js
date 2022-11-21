@@ -20,6 +20,7 @@ function App() {
   const [form, setForm] = useState(details);
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
+  const [edit, setEdit] = useState(false);
 
   function onChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -43,12 +44,22 @@ function App() {
       <h3 className="text-center m-4">Write your education</h3>
       <div className="d-flex boo notStart">
         <Education setEducation={setEducation} education={education} />
-        <EducOutput data={education} onDelete={deleteEdu}/>
+        <EducOutput
+          data={education}
+          onDelete={deleteEdu}
+          onEdit={setEdit}
+          editStatus={edit}
+        />
       </div>
       <h3 className="text-center m-4">Write your experience</h3>
       <div className="d-flex boo notStart">
         <Experience setExperience={setExperience} experience={experience} />
-        <ExpOutput data={experience} onDelete={deleteExp} />
+        <ExpOutput
+          data={experience}
+          onDelete={deleteExp}
+          onEdit={setEdit}
+          editStatus={edit}
+        />
       </div>
     </>
   );

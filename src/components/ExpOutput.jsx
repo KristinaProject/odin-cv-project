@@ -24,7 +24,7 @@ export function ExpOutput(props) {
                 </button>
                 <button
                   className="btn btn-secondary ms-2"
-                  onClick={() => props.onClick(item.school)}
+                  onClick={() => props.onEdit(true)}
                 >
                   Edit
                 </button>
