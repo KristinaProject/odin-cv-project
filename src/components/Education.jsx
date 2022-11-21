@@ -1,69 +1,63 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const eduInfo = {
   school: "",
   degree: "",
-  start: "",
-  end: "",
-  ability: "",
+  startDate: "",
+  endDate: "",
+  abilities: "",
 };
 
 export function Education(props) {
   const [form, setForm] = useState(eduInfo);
 
-  const schoolRef = useRef(null);
-  const degreeRef = useRef(null);
-  const startRef = useRef(null);
-  const endRef = useRef(null);
-  const abilityRef = useRef(null);
-
-  function onchange() {
-    const edu = {
-      school: schoolRef.current.value,
-      degree: degreeRef.current.value,
-      start: startRef.current.value,
-      end: endRef.current.value,
-      ability: abilityRef.current.value,
-    };
-
-    setForm(edu);
+  function onchange(e) {
+    setForm({ ...form, [e.target.name]: e.target.value });
   }
 
   function onSubmitEdu(e) {
     e.preventDefault();
     props.setEducation([...props.education, { ...form }]);
+    reset(e);
+  }
+
+  function reset(e) {
+    setForm(eduInfo);
   }
 
   return (
-    <form id="educa" className="row me-4 g-2 " onSubmit={onSubmitEdu}>
+    <form id="educa" className="row me-4 g-2 " onSubmit={(e) => onSubmitEdu(e)}>
       <div className="form-floating">
         <input
+          required
           type="text"
           className="form-control"
           name="school"
-          ref={schoolRef}
-          onChange={onchange}
+          value={form.school}
+          onChange={(e) => onchange(e)}
         />
         <label htmlFor="school">School or university name: </label>
       </div>
       <div className="form-floating">
         <input
+          required
           type="text"
           className="form-control"
           name="degree"
-          ref={degreeRef}
-          onChange={onchange}
+          value={form.degree}
+          onChange={(e) => onchange(e)}
         />
         <label htmlFor="degree">Degree: </label>
       </div>
       <div className="col-md">
         <div className="form-floating">
           <input
+            required
             type="date"
             className="form-control"
             name="startDate"
-            ref={startRef}
-            onChange={onchange}
+            value={form.startDate}
+            onChange={(e) => onchange(e)}
           />
           <label htmlFor="startDate">Start date: </label>
         </div>
@@ -71,11 +65,12 @@ export function Education(props) {
       <div className="col-md">
         <div className="form-floating">
           <input
+            required
             type="date"
             className="form-control"
             name="endDate"
-            ref={endRef}
-            onChange={onchange}
+            value={form.endDate}
+            onChange={(e) => onchange(e)}
           />
           <label htmlFor="endDate">End date: </label>
         </div>
@@ -83,11 +78,12 @@ export function Education(props) {
 
       <div className="form-floating">
         <textarea
+          required
           type="text"
           className="form-control"
-          name="abiilities"
-          ref={abilityRef}
-          onChange={onchange}
+          name="abilities"
+          value={form.abilities}
+          onChange={(e) => onchange(e)}
         />
         <label htmlFor="abilities">Abilities: </label>
       </div>

@@ -12,10 +12,10 @@ export function EducOutput(props) {
                 <h5 className="card-title">{item.degree}</h5>
                 
                 <p className="d-flex flex-column">
-                  <span>{item.start}</span> <span>{item.end}</span>
+                  <span>{item.startDate}</span> <span>{item.endDate}</span>
                 </p>
               </div>
-              <p className="card-text">{item.ability}</p>
+              <p className="card-text">{item.abilities}</p>
               <button
                 className="btn btn-primary"
                 onClick={() => props.onDelete(item.school)}
