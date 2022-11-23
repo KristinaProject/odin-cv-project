@@ -18,10 +18,10 @@ export function Education(props) {
   function onSubmitEdu(e) {
     e.preventDefault();
     props.setEducation([...props.education, { ...form }]);
-    reset(e);
+    reset();
   }
 
-  function reset(e) {
+  function reset() {
     setForm(eduInfo);
   }
 

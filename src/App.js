@@ -20,7 +20,7 @@ function App() {
   const [form, setForm] = useState(details);
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
-  const [edit, setEdit] = useState(false);
+  const [editName, setEditName] = useState(null);
 
   function onChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -32,6 +32,19 @@ function App() {
 
   function deleteExp(name) {
     setExperience(experience.filter((item) => item.cName !== name));
+  }
+
+  function onCancelEdit() {
+    setEditName(null);
+  }
+
+  function onEditing(name, form) {
+    // e.preventDefault();
+    const newEducation = [...education];
+    const findItem = newEducation.find((item) => item.name === name);
+    findItem.name = form.name;
+    console.log(findItem.name);
+    setEducation(newEducation);
   }
 
   return (
@@ -47,8 +60,10 @@ function App() {
         <EducOutput
           data={education}
           onDelete={deleteEdu}
-          onEdit={setEdit}
-          editStatus={edit}
+          onEdit={setEditName}
+          editStatus={editName}
+          onCancel={() => onCancelEdit}
+          onSubmitEdit={() => onEditing}
         />
       </div>
       <h3 className="text-center m-4">Write your experience</h3>
@@ -57,8 +72,6 @@ function App() {
         <ExpOutput
           data={experience}
           onDelete={deleteExp}
-          onEdit={setEdit}
-          editStatus={edit}
         />
       </div>
     </>

@@ -20,7 +20,11 @@
   align-items: flex-start;
 }
 
-.card {
-  min-width: 300px !important;
-  max-width: 500px !important;
+.card-mine {
+  min-width: 500px !important;
+  background-color: white !important;
+}
+
+#output {
+  background-color: white;
 }
