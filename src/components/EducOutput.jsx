@@ -3,14 +3,13 @@ import { EditEduCard } from "./EditEduCard";
 
 export function EducOutput(props) {
   const [edit, setEdit] = useState(null);
-  function onEditing(name, form) {
-    // e.preventDefault();
-    const newEducation = [...props.education];
-    const findItem = newEducation.find((item) => item.name === name);
-    findItem.name = form.name;
-    console.log(findItem.name);
-    props.setEducation(newEducation);
-  }
+  // function onEditing(name, form) {
+  //   const newEducation = [...props.education];
+  //   const findItem = newEducation.find((item) => item.name === name);
+  //   findItem.name = form.name;
+  //   console.log(findItem.name);
+  //   props.setEducation(newEducation);
+  // }
   return (
     <div id="eduOutput">
       {props.data.length === 0 ? (
@@ -19,7 +18,7 @@ export function EducOutput(props) {
         <div className="d-flex gap-2 flex-wrap">
           {props.data.map((item) =>
             edit !== null ? (
-              <EditEduCard onCancel={setEdit(null)} onEditing={onEditing}/>
+              <EditEduCard onCancel={() => {setEdit(null)}}/>
             ) : (
               <div className="card card-mine" key={item.school}>
                 <h5 className="card-header">{item.school}</h5>
@@ -41,7 +40,7 @@ export function EducOutput(props) {
                   <button
                     className="btn btn-secondary ms-2"
                     onClick={() => {
-                      setEdit(true);
+                      setEdit(item.school);
                     }}
                   >
                     Edit

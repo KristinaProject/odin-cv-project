@@ -57,7 +57,7 @@ export function EditEduCard(props) {
         </button>
         <button
           className="btn btn-secondary ms-2"
-          onClick={props.onSubmitEdit(props.school, form)}
+          
         >
           Save
         </button>
