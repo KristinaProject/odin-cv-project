@@ -5,5 +5,5 @@ that how you can open project.
 It`s simple project where you can create your cv
 
 <p>
-  <img src='/readmeImages/ReactApp.pdf' width='500px' />
+  <img src='readmeImages/ReactApp.pdf' width='500px' />
 </p>
