@@ -45,6 +45,7 @@ function App() {
         <Education setEducation={setEducation} education={education} />
         <EducOutput
           data={education}
+          setData={setEducation}
           onDelete={deleteEdu}
         />
       </div>
