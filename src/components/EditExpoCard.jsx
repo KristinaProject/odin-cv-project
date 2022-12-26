@@ -1,10 +1,10 @@
-export function EditEduCard(props) {
+export function EditExpoCard(props) {
   return (
     <div>
       <input
         type="text"
-        name="school"
-        defaultValue={props.form.school}
+        name="cName"
+        defaultValue={props.form.cName}
         className="form-control form-control-sm"
         onChange={props.handleChange}
       />
@@ -13,24 +13,24 @@ export function EditEduCard(props) {
           <input
             className="form-control form-control-sm"
             type="text"
-            name="degree"
-            defaultValue={props.form.degree}
+            name="role"
+            defaultValue={props.form.role}
             onChange={props.handleChange}
           />
 
           <div className="d-flex flex-column">
             <input
               type="date"
-              name="startDate"
+              name="startE"
               className="form-control form-control-sm"
-              defaultValue={props.form.startDate}
+              defaultValue={props.form.startE}
               onChange={props.handleChange}
             />
             <input
               type="date"
-              name="endDate"
+              name="endE"
               className="form-control form-control-sm"
-              defaultValue={props.form.endDate}
+              defaultValue={props.form.endE}
               onChange={props.handleChange}
             />
           </div>
@@ -38,9 +38,9 @@ export function EditEduCard(props) {
 
         <input
           type="text"
-          name="abilities"
+          name="description"
           className="form-control form-control-sm"
-          defaultValue={props.form.abilities}
+          defaultValue={props.form.description}
           onChange={props.handleChange}
         />
 
