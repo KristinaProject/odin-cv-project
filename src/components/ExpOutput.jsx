@@ -13,7 +13,7 @@ export function ExpOutput(props) {
 
   function onEditing(e, item) {
     e.preventDefault();
-    setEdit(item.school);
+    setEdit(item.cName);
 
     const values = {
       cName: item.cName,
@@ -36,15 +36,15 @@ export function ExpOutput(props) {
     e.preventDefault();
 
     const data = {
-      school: form.school,
-      degree: form.degree,
-      startDate: form.startDate,
-      endDate: form.endDate,
-      abilities: form.abilities,
+      cName: form.cName,
+      role: form.role,
+      startE: form.startE,
+      endE: form.endE,
+      description: form.description,
     };
 
     const newData = [...props.data];
-    const index = props.data.findIndex((item) => item.school === edit);
+    const index = props.data.findIndex((item) => item.cName === edit);
     newData[index] = data;
     props.setData(newData);
     setEdit(null);

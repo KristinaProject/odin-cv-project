@@ -54,6 +54,7 @@ function App() {
         <Experience setExperience={setExperience} experience={experience} />
         <ExpOutput
           data={experience}
+          setData={setExperience}
           onDelete={deleteExp}
         />
       </div>
