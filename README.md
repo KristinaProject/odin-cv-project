@@ -6,8 +6,3 @@ It`s simple project where you can create your cv
 
 
 <img src="React-App.png" width="500" />
-
-![](ReactApp.pdf)
-![](ReactApp.PDF)
-![](React-App.png)
-![](React-App.PNG)
