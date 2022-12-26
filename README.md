@@ -4,6 +4,7 @@ that how you can open project.
 
 It`s simple project where you can create your cv
 
-<p>
-  <img src="ReactApp.pdf" width="500" />
-</p>
+
+<img src="ReactApp.pdf" width="500" />
+
+![](ReactApp.pdf)
