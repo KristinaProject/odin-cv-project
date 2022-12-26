@@ -21,8 +21,9 @@
 }
 
 .card-mine {
-  min-width: 500px !important;
+  min-width: 450px !important;
   background-color: white !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
 #output {

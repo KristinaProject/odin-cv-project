@@ -44,10 +44,10 @@ export function EditEduCard(props) {
           onChange={props.handleChange}
         />
 
-        <button className="btn btn-primary" onClick={props.onCancel}>
+        <button className="btn btn-secondary" onClick={props.onCancel}>
           Cancel
         </button>
-        <button className="btn btn-secondary ms-2">Save</button>
+        <button className="btn btn-success ms-2">Save</button>
       </div>
     </div>
   );

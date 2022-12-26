@@ -81,13 +81,13 @@ export function EducOutput(props) {
                     </div>
                     <p className="card-text">{item.abilities}</p>
                     <button
-                      className="btn btn-primary"
+                      className="btn btn-secondary"
                       onClick={() => props.onDelete(item.school)}
                     >
                       Delete
                     </button>
                     <button
-                      className="btn btn-secondary ms-2"
+                      className="btn btn-success ms-2"
                       onClick={(e) => onEditing(e, item)}
                     >
                       Edit

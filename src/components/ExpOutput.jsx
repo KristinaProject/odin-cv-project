@@ -59,7 +59,7 @@ export function ExpOutput(props) {
           <div className="d-flex gap-2 flex-wrap">
             {props.data.map((item) =>
               edit !== item.cName ? (
-                <div className="card" key={item.cName}>
+                <div className="card card-mine" key={item.cName}>
                   <h5 className="card-header">{item.cName}</h5>
                   <div className="card-body">
                     <div className="d-flex justify-content-between">
@@ -70,13 +70,13 @@ export function ExpOutput(props) {
                     </div>
                     <p className="card-text">{item.description}</p>
                     <button
-                      className="btn btn-primary"
+                      className="btn btn-secondary"
                       onClick={() => props.onDelete(item.cName)}
                     >
                       Delete
                     </button>
                     <button
-                      className="btn btn-secondary ms-2"
+                      className="btn btn-success ms-2"
                       onClick={(e) => onEditing(e, item)}
                     >
                       Edit
