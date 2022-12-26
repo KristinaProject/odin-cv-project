@@ -58,7 +58,16 @@ export function EducOutput(props) {
         ) : (
           <div className="d-flex gap-2 flex-wrap">
             {props.data.map((item) =>
-              edit === null ? (
+              edit === item.school ? (
+                <EditEduCard
+                  key={item.school}
+                  handleChange={handleChange}
+                  onCancel={() => {
+                    setEdit(null);
+                  }}
+                  form={form}
+                />
+              ) : (
                 <div className="card card-mine" key={item.school}>
                   <h5 className="card-header">{item.school}</h5>
                   <div className="card-body">
@@ -85,14 +94,6 @@ export function EducOutput(props) {
                     </button>
                   </div>
                 </div>
-              ) : (
-                <EditEduCard
-                  handleChange={handleChange}
-                  onCancel={() => {
-                    setEdit(null);
-                  }}
-                  form={form}
-                />
               )
             )}
           </div>

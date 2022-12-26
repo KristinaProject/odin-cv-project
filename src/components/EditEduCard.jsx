@@ -1,7 +1,7 @@
 export function EditEduCard(props) {
 
   return (
-    <div key={props.form.school}>
+    <div>
       <input
         type="text"
         name="school"
