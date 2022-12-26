@@ -4,5 +4,6 @@ that how you can open project.
 
 It`s simple project where you can create your cv
 
-![react app image] (/readmeImages/ReactApp.pdf)
-<img src='/readmeImages/ReactApp.pdf' width='500px' />
+<p>
+  <img src='/readmeImages/ReactApp.pdf' width='500px' />
+</p>
